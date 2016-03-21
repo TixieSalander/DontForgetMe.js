@@ -1,19 +1,20 @@
 var DontForgetMe = (function () {
+	"use strict";
 
 	var title = document.title;
-
-	function init() {
-		_changeTitle();
-	}
 
 	function _changeTitle() {
 		document.addEventListener('visibilitychange', function () {
 			if (document.hidden) {
-				document.title = "Don't forget me !"
+				document.title = "Don't forget me !";
 			} else {
-				document.title = title
+				document.title = title;
 			}
 		})
+	}
+
+	function init() {
+		_changeTitle();
 	}
 
 	return {
